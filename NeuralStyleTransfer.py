@@ -72,7 +72,7 @@ if __name__ == '__main__':
 	N_FFT=2048
 	def read_audio_spectum(filename):
 		x, fs = librosa.load(filename, duration=58.04) # Duration=58.05 so as to make sizes convenient
-		S = librosa.stft(x, N_FFT)
+		S = librosa.stft(x, n_fft=N_FFT)
 		p = np.angle(S)
 		S = np.log1p(np.abs(S))  
 		return S, fs
