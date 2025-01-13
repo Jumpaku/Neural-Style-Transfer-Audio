@@ -190,7 +190,7 @@ if __name__ == '__main__':
 				run[0] += 1
 				if run[0] % 100 == 0:
 					print("run {}:".format(run))
-					print('Style Loss : {:8f}'.format(style_score.data[0])) #CHANGE 4->8 
+					print('Style Loss : {:8f}'.format(style_score.item())) #CHANGE 4->8 
 					print()
 
 				return style_score
